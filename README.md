@@ -1,7 +1,7 @@
 # Auto Rotator Plugin
 
 [![CI](https://github.com/HiroYokoyama/moleditpy_auto_rotator/actions/workflows/ci.yml/badge.svg)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/actions/workflows/ci.yml)
-![Test Coverage](https://img.shields.io/badge/coverage->80%25-green)
+![Test Coverage](https://img.shields.io/badge/coverage->90%25-green)
 [![Downloads](https://img.shields.io/github/downloads/HiroYokoyama/moleditpy_auto_rotator/total)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/releases)
 
 ## Overview
