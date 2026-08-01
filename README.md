@@ -2,8 +2,8 @@
 
 [![CI](https://github.com/HiroYokoyama/moleditpy_auto_rotator/actions/workflows/ci.yml/badge.svg)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/actions/workflows/ci.yml)
 ![Test Coverage](https://img.shields.io/badge/coverage->90%25-green)
-[![Downloads](https://img.shields.io/github/downloads/HiroYokoyama/moleditpy_auto_rotator/total)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/releases)
 [![GitHub tag](https://img.shields.io/github/v/tag/HiroYokoyama/moleditpy_auto_rotator?label=version)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/tags)
+[![GitHub Downloads](https://img.shields.io/github/downloads/HiroYokoyama/moleditpy_auto_rotator/total)](https://github.com/HiroYokoyama/moleditpy_auto_rotator/releases)
 
 ## Overview
 Auto Rotator is a small view plugin for MoleditPy that continuously spins the 3D
