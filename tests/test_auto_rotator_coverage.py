@@ -22,7 +22,7 @@ import numpy as np
 # (Mirrors tests/test_auto_rotator.py's harness.)
 # ---------------------------------------------------------------------------
 def _install_qt_stubs():
-    qt_core = types.ModuleType("PyQt6.QtCore")
+    qt_core = types.ModuleType("PySide6.QtCore")
 
     class _QCoreApplication:
         @staticmethod
@@ -44,12 +44,12 @@ def _install_qt_stubs():
             return self._active
     qt_core.QTimer = _QTimer
 
-    pyqt6 = types.ModuleType("PyQt6")
-    pyqt6.QtCore = qt_core
-    sys.modules["PyQt6"] = pyqt6
-    sys.modules["PyQt6.QtCore"] = qt_core
+    pyside6 = types.ModuleType("PySide6")
+    pyside6.QtCore = qt_core
+    sys.modules["PySide6"] = pyside6
+    sys.modules["PySide6.QtCore"] = qt_core
 
-    qt_widgets = types.ModuleType("PyQt6.QtWidgets")
+    qt_widgets = types.ModuleType("PySide6.QtWidgets")
 
     class _QDialog:
         def __init__(self, parent=None):
@@ -71,8 +71,8 @@ def _install_qt_stubs():
     ]:
         setattr(qt_widgets, name, lambda *args, **kwargs: MagicMock())
 
-    pyqt6.QtWidgets = qt_widgets
-    sys.modules["PyQt6.QtWidgets"] = qt_widgets
+    pyside6.QtWidgets = qt_widgets
+    sys.modules["PySide6.QtWidgets"] = qt_widgets
 
 
 _install_qt_stubs()

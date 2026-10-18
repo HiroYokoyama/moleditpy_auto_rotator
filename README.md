@@ -22,8 +22,8 @@ it just animates the live window so you can present or inspect a structure hands
 
 ## Requirements
 This plugin relies on the host application's environment (a PyVista `plotter` and
-PyQt6 UI):
-* `PyQt6`
+PySide6 UI):
+* `PySide6`
 * `numpy`
 * `pyvista`
 
