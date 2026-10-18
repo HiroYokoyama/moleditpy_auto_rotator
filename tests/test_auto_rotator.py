@@ -95,7 +95,7 @@ class TestMetadata(unittest.TestCase):
         self.assertEqual(rot_mod.PLUGIN_CATEGORY, "View")
 
     def test_version_is_semver(self):
-        parts = rot_mod.PLUGIN_VERSION.split(".")
+        parts = rot_mod.PLUGIN_VERSION.split("a", 1)[0].split(".")
         self.assertEqual(len(parts), 3)
         self.assertTrue(all(p.isdigit() for p in parts))
 

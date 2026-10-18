@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 # --- Plugin Metadata ---
 PLUGIN_NAME = "Auto Rotator"
-PLUGIN_VERSION = "1.0.0"
+PLUGIN_VERSION = "2.0.0a1"
 PLUGIN_AUTHOR = "HiroYokoyama"
 PLUGIN_DESCRIPTION = "Continuously spins the 3D viewer by orbiting the camera around a chosen axis."
 PLUGIN_CATEGORY = "View"
