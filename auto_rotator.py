@@ -6,7 +6,7 @@ rotation speed and axis and starts/stops the motion.
 
 Source code, README, and full license (GNU GPL):
     https://github.com/HiroYokoyama/moleditpy_auto_rotator
-Copyright (c) HiroYokoyama. Licensed under the GNU General Public License;
+Copyright (c) HiroYokoyama. Licensed under the GNU Lesser General Public License;
 see the LICENSE file in the repository above for the full terms.
 """
 
