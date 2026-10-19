@@ -6,7 +6,7 @@ rotation speed and axis and starts/stops the motion.
 
 Source code, README, and full license (GNU GPL):
     https://github.com/HiroYokoyama/moleditpy_auto_rotator
-Copyright (c) HiroYokoyama. Licensed under the GNU General Public License;
+Copyright (c) HiroYokoyama. Licensed under the GNU Lesser General Public License;
 see the LICENSE file in the repository above for the full terms.
 """
 
@@ -14,8 +14,8 @@ see the LICENSE file in the repository above for the full terms.
 
 import math
 import logging
-from PyQt6.QtCore import QCoreApplication, QTimer
-from PyQt6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout,
+from PySide6.QtCore import QCoreApplication, QTimer
+from PySide6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout,
                              QComboBox, QSpinBox, QPushButton, QFormLayout)
 import numpy as np
 
@@ -23,14 +23,14 @@ logger = logging.getLogger(__name__)
 
 # --- Plugin Metadata ---
 PLUGIN_NAME = "Auto Rotator"
-PLUGIN_VERSION = "1.0.0"
+PLUGIN_VERSION = "2.0.0"
 PLUGIN_AUTHOR = "HiroYokoyama"
 PLUGIN_DESCRIPTION = "Continuously spins the 3D viewer by orbiting the camera around a chosen axis."
 PLUGIN_CATEGORY = "View"
 PLUGIN_TAGS = ["Visualization"]
-PLUGIN_DEPENDENCIES = ["pyvista", "PyQt6", "numpy"]
-PLUGIN_SUPPORTED_MOLEDITPY_VERSION = ">=3.0.0, <5.0.0"
-PLUGIN_SUPPORTED_PYTHON_VERSION = ">=3.9, <3.15"
+PLUGIN_DEPENDENCIES = ["pyvista", "PySide6-Essentials", "numpy"]
+PLUGIN_SUPPORTED_MOLEDITPY_VERSION = ">=5.0.0, <6.0.0"
+PLUGIN_SUPPORTED_PYTHON_VERSION = ">=3.10, <3.15"
 PLUGIN_SUPPORTED_OS = ["Windows", "macOS", "Linux", "WSL"]
 
 # Timer cadence for smooth motion; the per-tick angle is derived from the

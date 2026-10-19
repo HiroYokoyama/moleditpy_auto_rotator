@@ -19,7 +19,7 @@ import numpy as np
 # Install Qt stubs so the plugin imports cleanly in a headless environment.
 # ---------------------------------------------------------------------------
 def _install_qt_stubs():
-    qt_core = types.ModuleType("PyQt6.QtCore")
+    qt_core = types.ModuleType("PySide6.QtCore")
 
     class _QCoreApplication:
         @staticmethod
@@ -41,12 +41,12 @@ def _install_qt_stubs():
             return self._active
     qt_core.QTimer = _QTimer
 
-    pyqt6 = types.ModuleType("PyQt6")
-    pyqt6.QtCore = qt_core
-    sys.modules["PyQt6"] = pyqt6
-    sys.modules["PyQt6.QtCore"] = qt_core
+    pyside6 = types.ModuleType("PySide6")
+    pyside6.QtCore = qt_core
+    sys.modules["PySide6"] = pyside6
+    sys.modules["PySide6.QtCore"] = qt_core
 
-    qt_widgets = types.ModuleType("PyQt6.QtWidgets")
+    qt_widgets = types.ModuleType("PySide6.QtWidgets")
 
     class _QDialog:
         def __init__(self, parent=None):
@@ -68,8 +68,8 @@ def _install_qt_stubs():
     ]:
         setattr(qt_widgets, name, lambda *args, **kwargs: MagicMock())
 
-    pyqt6.QtWidgets = qt_widgets
-    sys.modules["PyQt6.QtWidgets"] = qt_widgets
+    pyside6.QtWidgets = qt_widgets
+    sys.modules["PySide6.QtWidgets"] = qt_widgets
 
 
 _install_qt_stubs()
@@ -95,7 +95,7 @@ class TestMetadata(unittest.TestCase):
         self.assertEqual(rot_mod.PLUGIN_CATEGORY, "View")
 
     def test_version_is_semver(self):
-        parts = rot_mod.PLUGIN_VERSION.split(".")
+        parts = rot_mod.PLUGIN_VERSION.split("a", 1)[0].split(".")
         self.assertEqual(len(parts), 3)
         self.assertTrue(all(p.isdigit() for p in parts))
 
@@ -137,7 +137,7 @@ class TestShowRotatorDialog(unittest.TestCase):
 class TestToggle(unittest.TestCase):
     def _make_dialog(self):
         dialog = rot_mod.RotatorDialog.__new__(rot_mod.RotatorDialog)
-        from PyQt6.QtCore import QTimer  # the stub
+        from PySide6.QtCore import QTimer  # the stub
         dialog.timer = QTimer()
         dialog.btn_toggle = MagicMock()
         return dialog
@@ -234,7 +234,7 @@ class TestCloseEvent(unittest.TestCase):
     def test_close_stops_timer_and_unregisters(self):
         dialog = rot_mod.RotatorDialog.__new__(rot_mod.RotatorDialog)
         dialog.context = MagicMock()
-        from PyQt6.QtCore import QTimer  # stub
+        from PySide6.QtCore import QTimer  # stub
         dialog.timer = QTimer()
         dialog.timer.start()
         event = MagicMock()

@@ -59,7 +59,7 @@ jobs:
           gh release create "v$TAG" \
             --title "Auto Rotator $TAG" \
             --generate-notes \
-            auto_rotator.py
+            auto_rotator.py LICENSE COPYING LICENSING.md
 
       - name: Trigger moleditpy-plugins registry update
         if: success()
