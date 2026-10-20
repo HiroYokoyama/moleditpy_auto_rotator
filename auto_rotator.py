@@ -23,14 +23,14 @@ logger = logging.getLogger(__name__)
 
 # --- Plugin Metadata ---
 PLUGIN_NAME = "Auto Rotator"
-PLUGIN_VERSION = "2.0.0"
+PLUGIN_VERSION = "2.0.1"
 PLUGIN_AUTHOR = "HiroYokoyama"
 PLUGIN_DESCRIPTION = "Continuously spins the 3D viewer by orbiting the camera around a chosen axis."
 PLUGIN_CATEGORY = "View"
 PLUGIN_TAGS = ["Visualization"]
 PLUGIN_DEPENDENCIES = ["pyvista", "PySide6-Essentials", "numpy"]
 PLUGIN_SUPPORTED_MOLEDITPY_VERSION = ">=5.0.0, <6.0.0"
-PLUGIN_SUPPORTED_PYTHON_VERSION = ">=3.10, <3.15"
+PLUGIN_SUPPORTED_PYTHON_VERSION = ">=3.9, <3.15"
 PLUGIN_SUPPORTED_OS = ["Windows", "macOS", "Linux", "WSL"]
 
 # Timer cadence for smooth motion; the per-tick angle is derived from the
