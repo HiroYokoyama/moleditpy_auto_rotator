@@ -1,0 +1,10 @@
+{
+  "source": "auto_rotator.py",
+  "title": "Auto Rotator",
+  "assets": [
+    "auto_rotator.py",
+    "LICENSE",
+    "COPYING",
+    "LICENSING.md"
+  ]
+}
